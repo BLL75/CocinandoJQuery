@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+	<body>
+	<form>
+		<input name="" type="checkbox" />
+		<input name="" type="radio" />
+		<input name="" type="text" />
+		<input name="" type="button" />
+	</form>
+	<form>
+		<input name="" type="checkbox" />
+		<input name="" type="radio" />
+		<input name="" type="text" />
+		<input name="" type="button" />
+	</form>
+		<input name="" type="checkbox" />
+		<input name="" type="radio" />
+		<input name="" type="text" />
+		<input name="" type="button" /><br>
+		<a href='capitulo1.html'>Atras</a><br>
+		
+	<script type="text/JavaScript"
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+	<script type="text/JavaScript">
+	// Búsqueda de elementos dentro del DOM en este caso 'input' dentro de un envoltorio $('form'). La alerta nos muestra "8 inputs".
+	alert('selected ' + jQuery('input',$('form')).length + ' inputs');
+	
+	//Búsqueda del primer elemento, usando DOM como referencia.La alerta  = '4 inputs'.
+	alert('selected' + jQuery('input',document.forms[0]).length + ' inputs');
+	
+	//search within the body element for all input elements using an expression,
+	//Busqueda en el elemento body de todos los elementos input. La alerta es = '12 inputs.'.
+	//alerts "12 inputs"
+	alert('selected' + jQuery('input','body').length + ' inputs');
+	</script>
+	</body>
+</html>

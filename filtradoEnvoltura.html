@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+	<body>
+	    <h1>Filtrado de una envoltura de un conjunto de elementos DOM</h1>
+		<h2>Necesitamos la referencia a un solo elemento DOM o un conjunto de elementos DOM en el contexto
+            de otro elemento DOM o documento con el fin de operar sobre el elemento(s) usando
+            métodos de jQuery.
+		</h2>
+		<a href="#" class="external">link</a>
+		<a href="#" class="external">link</a>
+		<a href="#"></a>
+		<a href="#" class="external">link</a>
+		<a href="#" class="external">link</a>
+		<a href="#"></a></li>
+		<a href="#">link</a>
+		<a href="#">link</a>
+		<a href="#">link</a><br>
+		<textarea>alert(jQuery('a').filter('.external').length + ' external links');</textarea><br>
+		<a href="capitulo1.html">Volver al índice del capítulo</a>
+		
+		
+		
+		<script type="text/JavaScript"
+		src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+		<script type="text/JavaScript">
+		//alerts 4 left in the set
+		//Filtramos un conjunto de elementos por la clase external.
+		alert(jQuery('a').filter('.external').length + ' external links');
+		
+		
+		// Ahora estamos pasando el filter por una función anónima.
+		// Eso significa que cuando uso $(this) dentro de la función, me refería en realidad a cada elemento DOM en el envoltorio
+		//Dentro de la función, estoy comprobando cada elemento <a> en el sistema de la envoltura para ver
+        // si el elemento tiene un valor de clase (hasClass ()) de exterior.
+		alert(
+			jQuery('a')
+			.filter(function(index){ return $(this).hasClass('external');})
+			.length + ' external links 2'
+		);
+		
+		</script>
+	</body>
+</html>

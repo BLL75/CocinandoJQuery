@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+	<body>
+	    <h1>Encontrar hijos en uno o más elementos DOM seleccionados.</h1>
+		<p>Ut ad videntur facilisis <em>elit</em> cum. Nibh insitam erat facit
+		<em>saepius</em> magna. Nam ex liber iriure et imperdiet. Et mirum eros
+		iis te habent. </p>
+		<p>Claram claritatem eu amet dignissim magna. Dignissim quam elit facer eros
+		illum. Et qui ex esse <em>tincidunt</em> anteposuerit. Nulla nam odio ii
+		vulputate feugait.</p>
+		<p>In quis <em>laoreet</em> te legunt euismod. Claritatem <em>consuetudium</em>
+		wisi sit velit facilisi.</p>
+		<a href='capitulo1.html'>Volver índice capítulo 1</a><br>
+		
+	
+	<script type="text/JavaScript"
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+	<script type="text/JavaScript">
+	//alerts total italic words found inside of <p> elements
+	// La alerta nos muestra el total de italic words que hay en los elementos <p> y que son cursiva <em>;
+	// Utilizamos find para buscar los elementos <em> que hay en los <p>.
+	// Utilice el método .find () para crear un nuevo sistema de la envoltura de elementos en función del contexto
+	alert('The three paragraphs in all contain ' +
+	jQuery('p').find('em').length + 'italic words');
+	
+	//Ten en cuenta que también podríamos haber escrito el código pasando una referencia contextual
+    //como segundo parámetro a la función jQuery:
+	
+	alert('The three paragraphs in all contain(pasando una referencia contextual como segundo parametro a la función jQuery) ' + jQuery('em',$('p')).length +' italic words');
+    
+	//Es  más lógico, seleccionar todos los elementos en cursiva descendientes contenidos dentro de los ancestro <p>.
+	alert('Tercera forma de hacerlo paragraphs in all contain ' + jQuery('p em').length +' italic words');
+	</script>
+</body>
