@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+		<body>
+		    <div class='div'>
+				<h2>Podemos combinar una selección previa de los elementos DOM
+				    con la selección actual mediante el uso de el método andSelf().
+				</h2>
+			</div>
+			<div>
+				<p>Paragraph</p>
+				<p>Paragraph</p>
+				<li><a href='capitulo1.html'>Volver al índice del capítulo</a><br></li>
+			</div>
+		<script type="text/JavaScript" src="http://ajax.googleapis.com/
+		ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+		<script type="text/JavaScript">
+		//Con esta linea ponemos borde y color a los elementos p dentro de los div y a los div
+		jQuery('div').find('p').andSelf().css('border','1px solid #993300');
+		//Con este a los h2 y a la clase .div
+		jQuery('.div').find('h2').andSelf().css('border','6px solid #666666');
+		</script>
+	</body>
+</html>

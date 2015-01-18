@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+	<body>
+		<script type="text/JavaScript"
+		     src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js">
+		</script>
+		<script type="text/JavaScript">
+			//Usamos el método end () para deshacer el método find () para que cuando
+			//llamemos al método appendTo (), se añada lo que contenia originalmente el envoltorio.
+			jQuery('<p><a>jQuery</a></p>').find('a').attr('href','http://www.jquery.com')
+			.end().appendTo('body');
+			jQuery('<p><a>Volver al índice del capítulo.</a></p>').find('a').attr('href','capitulo1.html').css('border','1px solid #993300').end().appendTo('body');
+		</script>
+	</body>
+	<!--
+	    Métodos de manipulación:
+		
+	    • append() -- Añade elemento al final del elemento seleccionado.
+		• prepend() -- Añade elemento al principio del elemento seleccionado.
+		• prependTo() --  el contenido precede el método, ya sea como una expresión selector o como marcado creado sobre la marcha, y se inserta en el contenedor de destino
+	----• after() -- Estos métodos también insertan un nuevo código en la página, la diferencia con append() y prepend() 
+	|	             es que el código no forma parte del elemento seleccionado, sino que se inserta delante o después de él, creando así un nuevo elemento.
+	----• before() -- 
+		• insertAfter() --
+		• insertBefore() --
+		• wrap() -- 
+		• wrapAll() --
+		• wrapInner() --
+	-->
+</html>
